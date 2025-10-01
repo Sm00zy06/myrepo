@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="pt">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Mãe das Raizes | Parcerias</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+  <div class="navbar">
+    <div class="logo">
+      <img src="images_bank/main_logo.jpg" alt="Logo" />
+      <span>Associação Mãe das Raízes</span>
+    </div>
+
+    <!-- LINKS visíveis só no PC -->
+    <div class="navbar-links">
+      <a href="index.html">Início</a>
+      <a href="about_us.html">Sobre Nós</a>
+      <a href="realizar_sonhos.html">Realizar Sonhos</a>
+      <a href="eventos_projetos.html">Eventos e Projetos</a>
+      <a href="parcerias.html">Parcerias</a>
+      <a href="galeria.html">Galeria</a>
+      <a href="contactos.html">Contactos</a>
+      <a href="testemunhos.html">Testemunhos</a>
+      <a href="doacoes.html" class="doacoes">Doações</a>
+    </div>
+
+    <!-- Botão hamburguer (mobile) -->
+    <div class="menu-toggle" id="menu-toggle">&#9776;</div>
+  </div>
+
+  <div class="side-menu" id="side-menu">
+    <a href="javascript:void(0)" class="close-btn" id="close-btn">&times;</a>
+    <a href="index.html">Início</a>
+    <a href="about_us.html">Sobre Nós</a>
+    <a href="realizar_sonhos.html">Realizar Sonhos</a>
+    <a href="eventos_projetos.html">Eventos e Projetos</a>
+    <a href="parcerias.html">Parcerias</a>
+    <a href="galeria.html">Galeria</a>
+    <a href="contactos.html">Contactos</a>
+    <a href="testemunhos.html">Testemunhos</a>
+    <a href="doacoes.html" class="doacoes">Doações</a>
+  </div>
+
+
+  <div class="content">
+  </div>
+
+  <script>
+    document.addEventListener("DOMContentLoaded", () => {
+      const menu = document.getElementById("side-menu");
+      const toggle = document.getElementById("menu-toggle");
+      const closeBtn = document.getElementById("close-btn");
+
+      if (toggle && menu && closeBtn) {
+        toggle.addEventListener("click", () => {
+          menu.style.width = "250px"; // abre a aba lateral
+        });
+
+        closeBtn.addEventListener("click", () => {
+          menu.style.width = "0"; // fecha a aba lateral
+        });
+      }
+    });
+  </script>
+
+</body>
+
+</html>

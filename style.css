@@ -1,0 +1,153 @@
+/* RESET */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Segoe UI", sans-serif;
+  background: #fff;
+  color: #6a4e2f;
+  overflow-x: hidden;
+}
+
+/* NAVBAR */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.8rem 1.5rem;
+  background: #fff;
+  border-bottom: 1px solid #eee;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+}
+
+.logo img {
+  height: 40px;
+}
+
+.logo span {
+  font-weight: bold;
+  color: #7b5e36;
+  font-size: 1.2rem;
+}
+
+/* BOTÃO HAMBÚRGUER */
+.menu-toggle {
+  font-size: 1.8rem;
+  cursor: pointer;
+  color: #7b5e36;
+  display: none;
+  /* só aparece no mobile */
+}
+
+/* LINKS PARA PC */
+.navbar-links {
+  display: flex;
+  gap: 1.5rem;
+  align-items: center;
+}
+
+.navbar-links a {
+  text-decoration: none;
+  color: #7b5e36;
+  font-weight: 500;
+  transition: color 0.3s ease;
+}
+
+.navbar-links a:hover {
+  color: #d49a6a;
+}
+
+/* BOTÃO DE DOAÇÕES */
+.navbar-links a.doacoes,
+.side-menu .doacoes {
+  background: #e6ab0f;
+  color: #fff !important;
+  padding: 0.5rem 1.2rem;
+  border-radius: 25px;
+  font-weight: 600;
+  transition: background 0.3s ease, transform 0.2s ease;
+}
+
+.navbar-links a.doacoes:hover,
+.side-menu .doacoes:hover {
+  background: #c58c00;
+  transform: translateY(-2px);
+}
+
+/* SIDE MENU (MOBILE) */
+.side-menu {
+  height: 100%;
+  width: 0;
+  /* escondido por padrão */
+  position: fixed;
+  top: 0;
+  right: 0;
+  background-color: #ffd5c2;
+  overflow-x: hidden;
+  transition: 0.3s;
+  padding-top: 3rem;
+  z-index: 2000;
+}
+
+.side-menu a {
+  display: block;
+  padding: 1rem 2rem;
+  text-decoration: none;
+  font-size: 1.1rem;
+  color: #5a3e2b;
+  transition: background 0.2s;
+}
+
+.side-menu a:hover {
+  background: #f0bfa9;
+}
+
+.side-menu .close-btn {
+  position: absolute;
+  top: 15px;
+  right: 25px;
+  font-size: 2rem;
+  text-decoration: none;
+  color: #5a3e2b;
+}
+
+/* ====== RESPONSIVO ====== */
+@media (max-width: 768px) {
+  .navbar-links {
+    display: none;
+    /* esconde os links no mobile */
+  }
+
+  .menu-toggle {
+    display: block;
+    /* mostra hambúrguer no mobile */
+  }
+}
+
+/* ====== AJUSTE BOTÃO DOAÇÕES NO SIDE MENU ====== */
+.side-menu .doacoes {
+  border-radius: 0;
+  /* sem cantos arredondados */
+  padding: 1rem 2rem;
+  /* igual aos outros links */
+  margin: 0;
+  /* sem margens extras */
+  display: block;
+  /* ocupa a largura como os outros */
+  background: #e6ab0f;
+  /* fundo dourado */
+  color: #fff !important;
+  /* texto branco */
+  font-weight: 600;
+}
